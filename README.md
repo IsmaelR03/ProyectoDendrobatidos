@@ -41,9 +41,9 @@ conda install -c conda-forge ncbi-datasets-cli
 ```
 * Bajarse las proteinas
 ```
-./datasets download protein gene ACHE --taxon "Hyloxalus nexipus" --filename hyloxalus_ache.zip
-./datasets download protein gene CYP3A29 --taxon "Ranitomeya ventrimaculata" --filename ranitomeya_cytochrome.zip
-./datasets download protein gene ATP1A1 --taxon "Epipedobates anthonyi" --filename epipedobates_atpase.zip
+./datasets download protein gene NADH --taxon "Hyloxalus nexipus" --filename hyloxalus_ache.zip
+./datasets download protein gene liprin-alpha-1 isoform X5 --taxon "Ranitomeya ventrimaculata" --filename ranitomeya_cytochrome.zip
+./datasets download protein gene cytochrome b --taxon "Epipedobates anthonyi" --filename epipedobates_atpase.zip
 ```
 * Descomprimir las proteínas
 ```
