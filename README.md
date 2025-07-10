@@ -43,17 +43,11 @@ conda install -c conda-forge ncbi-datasets-cli
 ```
 esearch -db nuccore -query "cytb [GENE] AND Hyloxalus[ORGN]" | efetch -format fasta > cytbHyloxalus.fasta
 esearch -db nuccore -query "liprin-alpha-1 isoform X5 [GENE] AND Epipedobates[ORGN]" | efetch -format fasta > isoformX5Epipedobates.fasta
-esearch -db nuccore -query "NUP43 [GENE] AND Ranitomeya[ORGN]" | efetch -format fasta > NUP43.fasta
-```
-* Trasformar las secuencias fasta en un solo archivo
-```
-cat epipedobates_atpase/ncbi_dataset/data/*.faa > epipedobates_atpase.fasta
-cat hyloxalus_ache/ncbi_dataset/data/*.faa > hyloxalus_ache.fasta
-cat ranitomeya_cytochrome/ncbi_dataset/data/*.faa > ranitomeya_cytochrome.fasta
+esearch -db nuccore -query "NUP43 [GENE] AND Ranitomeya[ORGN]" | efetch -format fasta > NUP43Ranitomeya.fasta
 ```
 * Archivo combinado
 ```
-cat epipedobates_atpase.fasta hyloxalus_ache.fasta ranitomeya_cytochrome.fasta > dendrobatidae_proteins.fasta
+cat cytbHyloxalus.fasta isoformX5Epipedobates.fasta NUP43Ranitomeya.fasta > dendrobatidae_proteins.fasta
 ```
 * Usar BLASTp para buscar homólogos
 ```
