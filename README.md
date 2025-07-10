@@ -45,12 +45,6 @@ esearch -db nuccore -query "cytb [GENE] AND Hyloxalus[ORGN]" | efetch -format fa
 esearch -db nuccore -query "liprin-alpha-1 isoform X5 [GENE] AND Epipedobates[ORGN]" | efetch -format fasta > isoformX5Epipedobates.fasta
 esearch -db nuccore -query "NUP43 [GENE] AND Ranitomeya[ORGN]" | efetch -format fasta > NUP43.fasta
 ```
-* Descomprimir las proteínas
-```
-unzip epipedobates_atpase.zip
-unzip hyloxalus_ache.zip
-unzip ranitomeya_cytochrome.zip
-```
 * Trasformar las secuencias fasta en un solo archivo
 ```
 cat epipedobates_atpase/ncbi_dataset/data/*.faa > epipedobates_atpase.fasta
