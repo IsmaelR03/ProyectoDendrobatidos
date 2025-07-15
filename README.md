@@ -75,9 +75,9 @@ iqtree2 -t Astral.tree --gcf All.trees --prefix concord
 ```
 * Visualizar en Figtree la secuencia obtenida
 ## Resultado obtenido de BLASTP
-[Blastp]()
+* [Blastp](https://github.com/IsmaelR03/ProyectoDendrobatidos/blob/main/blast_results.out.md)
 ## Arboles filogenéticos obtenidos de secuencias protéicas y de rna
 * Arbol de rna
-![rna]()
+* ![rna]()
 * Arbol de proteina
-![proteina]()
+* ![proteina]()
