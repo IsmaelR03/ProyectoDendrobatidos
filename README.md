@@ -57,7 +57,13 @@ blastp -query dendrobatidae_proteins.fasta -db dendro_db -out blast_results.out 
 ```
 * Editar con ATOM las secuencias optenidas
 ```
-l
+^>[^ ]+ (\w+) \[organism=([^\]]+)\].*
+>$1 $2
+```
+* Otra opción git bash
+```
+awk '/^>/{match($0, /\(([^)]+)\)/, a); split($0, b, " "); print ">" b[2] " " b[3] " " a[1]} !/^>/' dendrobatidae_Orthologsaligned.fasta > dendrobatidae_OrthologsalignedATOM.fasta
+awk '/^>/{match($0, /\(([^)]+)\)/, a); split($0, b, " "); print ">" b[2] " " b[3] " " a[1]} !/^>/' dendrobatidae_proteinsaligned.fasta > dendrobatidae_proteinsalignedATOM.fasta
 ```
 * Construir arbol filogenético
 ```
@@ -65,13 +71,6 @@ module av iqtree
 module load iqtree/2.2.2.6
 iqtree -s dendrobatidae_Orthologsaligned.fasta -m TEST -bb 1000 -nt AUTO
 iqtree -s dendrobatidae_proteinsaligned.fasta -m TEST -bb 1000 -nt AUTO
-```
-* Arbol consenso Astral
-```
-astral=/u/scratch/d/dechavez/Bioinformatica-PUCE/RediseBio/IsmaelR03/OneHundred.Genes.Canids/Astral/astral.5.7.8.jar
-java -jar $astral -i All.trees -o Astral.tree
-module load iqtree/2.2.2.6
-iqtree2 -t Astral.tree --gcf All.trees --prefix concord
 ```
 * Visualizar en Figtree la secuencia obtenida
 ## Resultado obtenido de BLASTP
