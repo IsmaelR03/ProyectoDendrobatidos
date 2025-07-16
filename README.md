@@ -69,8 +69,8 @@ awk '/^>/{match($0, /\(([^)]+)\)/, a); split($0, b, " "); print ">" b[2] " " b[3
 ```
 module av iqtree
 module load iqtree/2.2.2.6
-iqtree -s dendrobatidae_Orthologsaligned.fasta -m TEST -bb 1000 -nt AUTO
-iqtree -s dendrobatidae_proteinsaligned.fasta -m TEST -bb 1000 -nt AUTO
+iqtree2 -s dendrobatidae_Orthologsaligned.fasta -m TEST -bb 1000 -nt AUTO
+iqtree2 -s dendrobatidae_proteinsaligned.fasta -m TEST -bb 1000 -nt AUTO
 ```
 * Visualizar en Figtree la secuencia obtenida
 ## Resultado obtenido de BLASTP
