@@ -80,3 +80,5 @@ iqtree -s dendrobatidae_proteinsaligned.fasta -m TEST -bb 1000 -nt AUTO
 * ![rna]()
 * Arbol de proteina
 * ![proteina](https://github.com/IsmaelR03/ProyectoDendrobatidos/blob/main/dendrobatidae_proteinsaligned.png)
+## Carpetas
+* [Programas]()
